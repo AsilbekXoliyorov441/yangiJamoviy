@@ -1,0 +1,65 @@
+:root {
+  --main-color:black;
+  --color: white;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#hero .content {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  margin-top: 100px;
+  gap: 15px;
+}
+@media (max-width: 900px) {
+  #hero .content {
+    grid-template-columns: auto auto auto;
+  }
+}
+@media (max-width: 650px) {
+  #hero .content {
+    grid-template-columns: auto auto;
+  }
+}
+@media (max-width: 500px) {
+  #hero .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+#hero .content .card {
+  display: none;
+}
+@media (max-width: 900px) {
+  #hero .content .card {
+    display: block;
+  }
+}
+@media (max-width: 650px) {
+  #hero .content .card {
+    display: none;
+  }
+}
+#hero .content .card1 {
+  width: 200px;
+  height: 150px;
+  background-color: var(--main-color);
+  color: var(--main-color);
+}
+#hero .content .card1:hover {
+  background-color: var(--color);
+  color: var(--color);
+  transition: 0.5s;
+}
